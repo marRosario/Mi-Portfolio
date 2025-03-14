@@ -1,0 +1,857 @@
+@import url("assets/reset\ \(1\).css");
+
+
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0deg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:#ffc0cb;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffc0cb;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:rgb(161, 158, 236);
+}
+
+HTML{
+font-family: "Raleway";
+
+}
+body {
+  background: linear-gradient(to right, rgb(161,158,236), rgb(245,200,207));
+flex-direction: column;
+align-items: center;
+
+
+}
+
+header{
+background: linear-gradient(to right, rgb(161, 158, 236), rgb(245, 200, 207));
+height: 60px;
+padding: 0 30px;
+display: flex;
+align-items: center;
+justify-content:space-between;
+position:relative;
+margin-top: 50px;
+}
+
+.logo{
+  display:flex;
+  align-items: center; 
+  gap:10px;
+  height:40px;
+  animation:  tilt-n-move-shaking 1s ease-in-out 5;
+ 
+}
+.menu__title {
+  font-size: 40px;
+  font-weight: bold;
+  color:#333;
+  animation:  tilt-n-move-shaking 1s ease-in-out 5;
+}
+
+
+
+.menu__list{
+ display: flex; 
+ gap:20px;
+ margin:0;
+ padding:0;
+ list-style: none; 
+align-items: center;
+
+}
+
+.menu__list.active {
+  display: block; /
+}
+
+
+.menu__list li a{
+  color:#333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu__list li a:hover{
+  color:  rgb(161, 158, 236);
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+.menu__toggle {
+  display: none;
+}
+
+.menu__icon {
+  display: none; 
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Estilo para el menú cuando  cuando se hace clic en el icono */
+.menu__toggle:checked + .menu__icon + nav .menu__list {
+  display: flex;
+}
+
+
+.title__div{
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 70%;
+  background: linear-gradient(to right, #ffd1dc, #ffc0cb, #ffb0c1);
+  margin:40px auto;
+  margin-top:100px;
+  padding: 50px 10px 20px 35px;
+  border: 2px solid #ccc; 
+  border-radius: 15px;
+  box-shadow:  0 6px 8px rgba(37, 35, 45, 0.9);
+  }
+  
+
+  .titulo-red {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    gap: 20px; 
+    padding: 0;
+    margin: 0;
+}
+  
+  .title__profile {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+    margin-right: 20px; 
+  }
+  
+  .title__container{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 18px; 
+  color:#333;
+  
+  }
+  
+
+  .title__bio {
+  font-size: 18px;
+  font-weight: bold;
+  text-align:center;
+  margin-top:20px;
+  
+  }
+  
+
+  .title__subsection{
+  display: flex;
+  text-align: justify;
+  margin-top: 20px;
+  
+  }
+
+
+a:hover,
+a:active{
+  color:rgb(161, 158, 236);
+  font-size: 18px;
+ 
+}
+
+
+.title__network__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  gap: 10px; 
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+}
+  
+  
+  a:hover,
+  a:active{
+    color:rgb(161, 158, 236);
+    font-size: 18px;
+    transition: font-size 0.3s ease;
+  }
+
+  .title__network img{
+    height: auto;
+    transition: 0.8s;
+  }
+  
+  
+  .title__network__item img {
+    width: 40px; 
+    height: auto;
+    transition: transform 0.3s ease;
+    
+  }
+
+  .title__network__item img:hover {
+    transform: rotateY(360deg);
+    transition: transform 0.8s ease; 
+}
+
+  
+  .title__network:active{
+    scale: 1;
+  }
+
+
+/*Sección About*/
+
+section.about{
+display: flex;
+width: 70%;
+margin:40px auto;
+background:linear-gradient(to right, #ffd1dc, #ffc0cb, #ffb0c1);
+font-size: 18px;
+color:#333;
+line-height: 1.5;
+padding: 50px 30px 50px 40px;
+text-align:justify;
+border: 2px solid #ccc; 
+border-radius: 15px;
+box-shadow: 0 6px 8px rgba(37, 35, 45, 0.9);
+
+}
+
+.about__title{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-size: 30px;
+
+}
+
+
+.skills__title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 150px;
+}
+
+.skills__line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 50px;
+
+}
+
+.skills__box {
+  margin: 40px;
+
+}
+
+.skills__name {
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+ text-align: center;
+  
+}
+
+
+
+.skills__img img {
+  width: 80px; 
+  height: 80px;  
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.5s ease-in-out;
+ 
+}
+
+.skills__img img:hover {
+  transform: rotate(360deg); 
+}
+
+
+.container-formacion{
+  display: flex;
+  flex-direction: column;
+  max-width: 1250px;
+  margin:40px auto;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  
+  }
+  
+  .academic__courses {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+    padding: 20px; 
+    width: 100%; 
+  }
+  
+  
+  .academic__courses__box{
+    display:flex;
+    flex-wrap: wrap;
+    margin:0;
+    justify-content: center; 
+    gap:40px;
+    width: 350px;
+    height: 300px;
+     
+}
+
+
+
+.academic__title{
+text-align: center;
+font-size: 25px;
+font-weight: bold;
+color:#000000;
+margin-bottom: 40px;
+
+}
+
+
+.academic__courses__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  padding:  18px;
+  background: linear-gradient(to right, #ffd1dc, #ffc0cb, #ffb0c1);
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 6px 8px rgba(37, 35, 45, 0.9);
+  width: 250px !important;  
+  height: 250px !important;  
+  box-sizing: border-box; 
+  overflow: hidden;
+  
+}
+
+
+.academic__courses__item__img1 img {
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
+  display: block; 
+  padding-top: 7px;
+}
+
+.academic__courses__item__img4 {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100px; 
+}
+
+.academic__courses__item__img4 img {
+  max-width: 100%; 
+  height: auto;
+}
+
+
+
+.academic__courses__item__title {
+  font-size: 18px;
+  font-weight: bold;
+  color:#333;
+  margin-top: 10px;
+  text-align: center;  
+}
+
+
+#uno, #dos, #cero, #tres,#cuatro{
+  width: 188px;
+  height: 170px;
+  }
+
+  
+
+
+.academic__courses__item__title {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+  text-align: center; 
+}
+
+
+.academic__courses__item__subtitle {
+  font-size: 16px; 
+  color: #333; 
+  text-align: center; 
+
+}
+
+  #texto{
+   padding-bottom: 10px;
+   
+  }
+  
+    
+    .experience img{
+    display:flex;
+    
+  }
+
+  .academia-button button {
+    width: 130px;
+    height: 30px;
+    font-size: 16px;
+    margin-top: 13px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background: #4A4A4A; 
+    color: #FFFFFF; 
+    border: 2px solid #4A4A4A;
+  }
+  
+  .academia-button button:hover {
+    background: #333333; 
+    color: #FFD700;
+  }
+  
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.experience__section__title{
+display:flex;
+justify-content: center;
+font-size: 25px;
+font-weight: bold;
+color:#000000;
+text-align: center;
+margin-bottom: 70px;
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+   gap: 40px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+
+.card {
+  width: 200px;
+  height: auto;
+  background: linear-gradient(to right, #ffd1dc, #ffc0cb, #ffb0c1); 
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 8px rgba(37, 35, 45, 0.9);
+
+}
+
+
+.card img {
+  width: 100%;    
+  height: 200px;  
+  object-fit: cover; 
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-button {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-button button {
+  width: 130px; 
+  height: 30px; 
+  font-size: 14px; 
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos para el primer botón */
+.card-button a:first-of-type button {
+  background: #4A4A4A; 
+  color: #FFFFFF; 
+  border: 2px solid #4A4A4A;
+}
+
+.card-button a:first-of-type button:hover {
+  background: #333333; 
+  color: #FFD700; 
+}
+
+/* Estilos para el segundo botón */
+.card-button a:last-of-type button {
+  background: #0D9488;
+  color: #FFFFFF; 
+  border: 2px solid #1E3A8A;
+}
+
+.card-button a:last-of-type button:hover {
+  background: #0F766E; 
+  color: #FFFFFF; 
+}
+
+/* Nueva clase .button-black para el primer botón */
+.button-black {
+  background: #4A4A4A; 
+  color: #FFFFFF; 
+  border: 2px solid #4A4A4A;
+}
+
+/* Hover para el primer botón */
+.button-black:hover {
+  background: #333333; 
+  color: #FFD700; 
+}
+
+
+
+
+/* Estilos generales para la sección de contacto */
+
+.formcontato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%; 
+  padding: 20px; 
+  background: linear-gradient(to right, #ffd1dc, #ffc0cb, #ffb0c1); 
+  margin: 30px auto; 
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 6px 8px rgba(37, 35, 45, 0.9);
+}
+
+
+
+
+/* Estilos para el contenedor del formulario de contacto */
+.formcontato__contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  gap:15px;
+}
+
+/* Estilos para el título del formulario de contacto */
+.formcontato__title {
+  font-size: 25px;
+  font-weight: bold;
+  color:#333;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+
+
+/* Estilos para el subtexto del formulario de contacto */
+.formcontato__subtext {
+  font-size: 14px;
+  color:#333;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+
+
+
+/* Estilos para el texto del formulario de contacto */
+.formcontato__text {
+  width:auto;
+  width: auto;
+  color:#333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+ 
+ .formcontato__input,
+ .formcontato__textarea {
+   width: 100%; 
+   max-width: 600px; 
+   padding: 10px; 
+   margin-bottom: 15px;
+   color:#333;
+   background: linear-gradient(to right, #ffd1dc, #ffc0cb, #ffb0c1); 
+   border: 2px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box; 
+ }
+
+ input[type="text"],
+ input[type="email"],
+ textarea {
+   background: linear-gradient(to right, #ffd1dc, #ffc0cb, #ffb0c1) !important; /* Forzar el degradado */
+   color: #333;
+   border: 2px solid #ccc;
+   box-sizing: border-box;
+   outline: none;
+ }
+
+
+/* Estilos para el botón de enviar del formulario de contacto */
+.formcontato__botao {
+
+  width: 50%; 
+  max-width: 600px;
+  background: linear-gradient(to right, #ffd1dc, #ffc0cb, #ffb0c1); 
+  color:#333;
+  margin-top: 10px;
+  border: 2px solid  #ccc;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition:  0.3s ease;
+}
+
+/* Estilos para el botón de enviar del formulario de contacto al pasar el mouse */
+
+.formcontato__botao:hover {
+  background: linear-gradient(to right, #ffb0c1, #ffc0cb, #ffd1dc); 
+}
+
+/*footeer*/
+
+section.footer{
+  font-size: 14px;
+  font-weight: bold;
+  color:#464646;
+  height: 100px; 
+  text-align: center;
+  margin-top: 40px;
+  overflow: hidden;
+
+  
+}
+
+.back-to-top {
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  background-color: #355E3B; 
+  color: white; 
+  padding: 10px 15px;
+  border-radius: 50px; 
+  text-decoration: none; 
+  font-size: 16px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: opacity 0.3s ease; 
+  
+}
+
+.back-to-top:hover {
+  background-color: #4CAF50; 
+}
+
+
+.email-section{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+align-items: center;
+}
+
+.email-icon {
+  width: 24px; 
+  filter: brightness(0) contrast(100%);
+  margin-right: 8px;
+  
+}
+
+.email-text {
+  font-size: 16px; 
+  color: #333; 
+}
+
+
+
+/*Tablet*/
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+  header{
+    padding: 20px 100px; 
+    
+  }
+  .logo{
+      font-size: 16px;
+  }
+  .menu__list{
+      display:flex;
+      flex-direction: row;
+      font-size: 16px;
+      gap:15px
+
+  }
+
+  .menu__list__item__c{
+    display: none;
+  }
+
+  .title__div {
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+.skills__box {
+  width: 45%; 
+  margin:0 auto; 
+}
+
+.skills__line {
+  justify-content: space-evenly; 
+
+
+}
+
+}
+
+@media (max-width: 960px) {
+  .menu__icon {
+      display: block; 
+  }
+
+  .menu__list {
+      display: none; 
+      flex-direction: column; 
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      align-items: center;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: linear-gradient(to right, rgb(161, 158, 236), rgb(245, 200, 207));
+      width: 100%;
+      padding: 20px 0;
+      
+      font-size:12px;
+      z-index: 999;
+    }
+
+  .menu__list li {
+      margin: 5px 0;
+  }
+
+  .menu__toggle:checked + .menu__icon + nav .menu__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+  position: relative;
+  z-index: 1000; 
+}
+.title {
+  padding-top: 120px; 
+  z-index: 1000; 
+}
+
+}
+
+@media (max-width: 768px) {
+  .title__div {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+  }
+
+  .title__profile {
+    width: 150px; 
+    height: 150px;
+    margin-right: 0; 
+  }
+
+  .title__container {
+    text-align: center; 
+    font-size: 16px; 
+  }
+}
+
+
+
+/* Media query para pantallas menores a 600px */
+@media (max-width: 600px) {
+  .formcontato {
+    width: 90%; 
+    padding: 15px; 
+    margin: 20px auto; 
+  }
+
+  /* Estilos para los inputs y el textarea */
+  .formcontato__input,
+  .formcontato__textarea {
+    max-width: 100%; 
+    padding: 8px; 
+  }
+
+  /* Estilos para el botón */
+  .formcontato__botao {
+    width: 100%; 
+    padding: 8px 10px; 
+}
+
+
+}
