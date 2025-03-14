@@ -725,6 +725,12 @@ align-items: center;
   color: #333; 
 }
 
+.badge-base {
+  max-width: 150px; /* Ajusta según tus necesidades */
+  height: auto;
+}
+
+
 
 
 /*Tablet*/
